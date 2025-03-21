@@ -52,7 +52,7 @@ def get_people(results):
 	return people_coords
 
 def move_forward():
-	control.absolute_move(-75, 56, 1.0, speed)
+	control.absolute_move(-60, 16, 1.0, speed)
 
 IP = '10.32.38.127'
 speed = 20
@@ -70,6 +70,8 @@ class_colors = generate_colors(len(model.names))
 
 stream = cv2.VideoCapture(stream_url)
 while (stream.isOpened()):
+
+	#print(control.get_current_ptz())
 	
 	ret, img = stream.read()
 	if ret:
